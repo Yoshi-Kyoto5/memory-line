@@ -1,0 +1,29 @@
+<div class="posts">
+  <p class="post-list">Post - List of..... "<%= @nickname %>".....</p>
+  <% @messages.each do |message| %>
+    <div class="post__image" style="background-image: url(<%= message.image%>);">
+      <span class="post__image__name">
+        <a href="/users/<%= message.user.id %>">
+          <span>Poster : </span><%= message.user.nickname %>
+        </a>
+      </span>
+      <div class="action">
+        <ul class="action_list">
+          <span><%= image_tag 'arrow_top.png' %></span>
+          <li>
+            <%= link_to 'Detail', "/messages/#{message.id}", method: :get %>
+          </li>
+          <li>
+            <%= link_to '..Edit..', "/messages/#{message.id}/edit", method: :get %>
+          </li>
+          <li>
+            <%= link_to 'Delete', "/messages/#{message.id}", method: :delete %>
+          </li>
+        </ul>
+      </div>
+     <div class="post__text">
+      <%= simple_format(message.text) %>
+    </div>
+  <% end %>
+  <%= paginate(@messages)%>
+</div>

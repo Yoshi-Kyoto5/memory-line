@@ -1,0 +1,25 @@
+    <div class="content__image" style="background-image: url(<%= message.image%>);">
+      <span class="content__image__name">
+        <a href="/users/<%= message.user.id %>">
+          <span>Poster : </span><%= message.user.nickname %>
+        </a>
+      </span>
+      <div class="action">
+        <ul class="action_list">
+          <span><%= image_tag 'arrow_top.png' %></span>
+          <li>
+            <%= link_to 'Detail', "/messages/#{message.id}", method: :get %>
+          </li>
+          <% if user_signed_in? && current_user == message.user_id%>
+          <li>
+            <%= link_to '..Edit..', "/messages/#{message.id}/edit", method: :get %>
+          </li>
+          <li>
+            <%= link_to 'Delete', "/messages/#{message.id}", method: :delete %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+     <div class="content__text">
+      <%= simple_format(message.text) %>
+    </div>

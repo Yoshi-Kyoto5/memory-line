@@ -1,0 +1,49 @@
+<div class="shows">
+  <div class="show__image" style="background-image: url(<%= @message.image%>);">
+    <span class="show__image__name">
+      <a href="/users/<%= @message.user.id %>">
+      <span>Poster : </span><%= @message.user.nickname %>
+      </a>
+    </span>
+    <% if user_signed_in? && current_user.id == @message.user.id %>
+      <div class="action">
+        <ul class="action_list">
+          <span><%= image_tag 'arrow_top.png' %></span>
+          <li>
+            <%= link_to '..Edit..', "/messages/#{@message.id}/edit", method: :get %>
+          </li>
+          <li>
+            <%= link_to 'Delete', "/messages/#{@message.id}", method: :delete %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+    <div class="show__text">
+    <%= simple_format(@message.text) %>
+    </div> 
+  </div> 
+  <div class="comment">
+    <% if current_user %>
+      <%= form_with(model: [@message, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "Comment", rows: "3" %>
+        <%= form.file_field :image, class: "comment-image", placeholder: "Image URL" %>
+        <%= form.submit "Comment - Send", class: "comment-btn" %>
+      <% end %>
+    <% else %>
+      <div class="strong">
+      <strong><p>You need to "Sing-up" or "Log-in" for posting some comments</p></strong>
+      </div>
+    <% end %>
+      <div class="comments">
+      <h4>＜Comments - Line＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p class="comment-box">
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+            <img src="<%= comment.image%>">
+        <% end %>
+      <% end %>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MemoryLine</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Unica+One::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header__top">
+        <a href="/"><%= image_tag 'logo.png', class: "header__top__left" %></a>
+        <% if user_signed_in? %>
+          <div class="header__top__right">
+            <span><%= current_user.nickname %>
+            <%= link_to "My-page", "/users/#{current_user.id}", class: "registration" %>
+            <%= link_to "Log-out", destroy_user_session_path, class: "registration", method: :delete %>
+            </span>
+            <%= link_to  "New-Post", "/messages/new", class: "post" %>
+          </div>
+        <% else %>
+          <div class="header__top__right">
+            <%= link_to "Sign-up", new_user_registration_path, class: 'registration' %>
+            <%= link_to "Log-in", new_user_session_path, class: 'registration' %>
+          </div>
+        <% end %>
+        </div>
+      </div>
+      <div class= "header__navbar">
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>
