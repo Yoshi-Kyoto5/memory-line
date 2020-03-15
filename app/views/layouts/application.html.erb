@@ -43,6 +43,10 @@
         </div>
       </div>
       <div class= "header__navbar">
+        <%= form_with(url: messages_searches_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "Searching words", class: "search-input" %>
+          <%= form.submit "Search", class: "search-btn" %>
+        <% end %>
       </div>
     </header>
     <%= yield %>

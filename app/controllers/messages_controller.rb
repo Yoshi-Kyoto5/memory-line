@@ -31,7 +31,6 @@ class MessagesController < ApplicationController
     message = Message.find(params[:id])
     message.destroy
   end
-
   private
   def message_params
     params.require(:message).permit(:image, :text).merge(user_id: current_user.id)
