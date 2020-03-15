@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :messages
   has_many :comments
 
-  validates :nickname, presence: true, uniqueness: true
+  validates :nickname, presence: true, length: { maximum: 8 }, uniqueness: true
 end
