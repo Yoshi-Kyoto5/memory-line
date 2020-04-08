@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: memory-line_production
-  username: memory-line
-  password: <%= ENV['MEMORY-LINE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
