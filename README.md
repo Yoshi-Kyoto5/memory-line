@@ -1,7 +1,7 @@
 # README
 
 # Name  
-- Memory-Line 
+![logo](https://user-images.githubusercontent.com/61217608/79215713-f3400d00-7e86-11ea-9662-73eb5761ab9f.png)
 
 # Suteru
 ![24a8b25eb7b538af75e0a6ba10c1b927](https://user-images.githubusercontent.com/61217608/79213718-9a6f7500-7e84-11ea-909e-965f5aeaf945.jpg)
