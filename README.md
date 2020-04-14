@@ -26,8 +26,8 @@
 - 統合テスト機能（ルートアクセス→ログイン処理→投稿）
 
 # Requirement(function/skill) 
-- Ruby, 2.5.1|Rails, 5.2.3|mysql2, 0.5.3|Git|GitHub|AWS(S3)|heroku|carrierwave|
-mini_magick|kaminari|devise|pry-rails|rspec-rails|factory_bot_rails|capybara 2.15
+- Ruby, 2.5.1 | Rails, 5.2.3 | mysql2, 0.5.3 | Git | GitHub |AWS(S3) | heroku | carrierwave |
+ mini_magick | kaminari | devise | pry-rails | rspec-rails | factory_bot_rails | capybara 2.15
 
 # Author  
 - Github: https://github.com/Yoshi-Kyoto5/
