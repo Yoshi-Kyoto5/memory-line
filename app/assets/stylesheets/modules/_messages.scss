@@ -99,7 +99,7 @@ header {
       margin: 0 0;
       ul {
         img {
-          margin: 2px 650px;
+          margin: 2px 640px;
           background-color: black;
           }
         }
@@ -111,17 +111,18 @@ header {
             background-color: black;
             border-radius: 5px;
             color: orange;
+            border: 5px solid pink;
             font-size: 10px;
             font-family: arial black;
             cursor: pointer;
-            margin: 0 630px;
+            margin: 0 615px;
             padding: 10px 10px;
-            opacity: .10;
+            opacity: .5;
           }
           a:hover{
             background-color:black;
             color: orange;
-            opacity: .7;
+            opacity: .9;
           }
         }
       }
@@ -313,29 +314,30 @@ header {
       margin: 0 0;
       ul {
         img {
-          margin: 2px 650px;
+          margin: 2px 640px;
           background-color: black;
           }
         }
         li {
-          margin: 1px 0;
+          margin: 5px 0;
           padding: 7px 0;
           a {
             text-decoration: none;
             background-color: black;
             border-radius: 5px;
+            border: 5px solid pink;
             color: orange;
             font-size: 10px;
             font-family: arial black;
             cursor: pointer;
-            margin: 0 630px;
+            margin: 0 615px;
             padding: 10px 10px;
-            opacity: .10;
+            opacity: .5;
           }
           a:hover{
             background-color:black;
             color: orange;
-            opacity: .7;
+            opacity: .9;
           }
         }
       }
