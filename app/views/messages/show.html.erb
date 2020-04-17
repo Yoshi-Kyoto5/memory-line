@@ -25,7 +25,7 @@
   <div class="comment">
     <% if current_user %>
       <%= form_with(model: [@message, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "Comment", rows: "3" %>
+        <%= form.text_area :text, placeholder: "Comment: less than 140", rows: "3" %>
         <%= form.file_field :image, class: "comment-image", placeholder: "Image URL" %>
         <%= form.submit "Comment - Send", class: "comment-btn" %>
       <% end %>
