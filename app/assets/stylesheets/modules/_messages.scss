@@ -11,7 +11,7 @@ header {
     display: flex;
     background-color: black;
     .header__top__left {
-      padding: 20px 61px;
+      padding: 20px 72px;
     }
     .header__top__right{
       margin: 0 47px;
@@ -135,6 +135,18 @@ header {
     margin-top: 306px;
     border: 3px solid #FF773E;
     margin-bottom: 50px;
+  }
+  .page {
+    font-size: 20px;
+    color: blue;
+  }
+  .next {
+    font-size: 20px;
+    color: blue;
+  }  
+  .last {
+    font-size: 20px;
+    color: blue;
   }
 }
 
