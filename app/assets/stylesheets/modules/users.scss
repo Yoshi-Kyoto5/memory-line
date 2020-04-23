@@ -1,0 +1,54 @@
+.new_user {
+  margin: 30px 0;
+  .field {
+    height: 40px;
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+    #user_nickname {
+      height: 40px;
+      width: 500px;
+      margin: 0 auto;
+      border: 1px solid black;
+    }
+    #user_email {
+      height: 40px;
+      width: 500px;
+      margin: 0 auto;
+      border: 1px solid black;
+    }
+    #user_password {
+      height: 40px;
+      width: 500px;
+      margin: 0 auto;
+      border: 1px solid black;
+    }
+    #user_password_confirmation {
+      height: 40px;
+      width: 500px;
+      margin: 0 auto;
+      border: 1px solid black;
+    }
+  }
+  .actions {
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+    .submit {
+      height: 60px;
+      width: 500px;
+      margin: 0 auto;
+      border-radius: 5px;
+      display: block;
+      text-align: center;
+      line-height: 50px;
+      background-color: black;
+      color: orange;
+      font-size: 20px;
+      font-family: arial black;
+      cursor: pointer;
+      border: 5px solid orange;
+    }
+  }
+}
