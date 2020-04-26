@@ -13,6 +13,8 @@
 - 海外の人が、自分の名前を日本人に日本語で命名してもらうことができる。
 - 新しく生まれた日本語を知ることができる。
 
+# Planning background
+
 # Test account  
 - E-mail  : yoshi@gmail.com 
 - Password: yoshi123
